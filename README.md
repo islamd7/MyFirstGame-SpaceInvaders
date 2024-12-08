@@ -1,3 +1,4 @@
 # MyFirstGame-SpaceInvaders
  Space Invaders
-Run the game,after extract file from zip
+This game was made in 3 days.
+Run the game,after extract file from zip.
