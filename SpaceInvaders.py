@@ -8,6 +8,7 @@ pygame.init()
 
 #Screen
 screen = pygame.display.set_mode((800,600))
+is_fullscreen = False
 
 #TItle and Icon
 pygame.display.set_caption("Space Invaders")
@@ -97,7 +98,6 @@ while running:
                     bullet_sound.play()
                     bulletX = playerX
                     fire_bullet(bulletX,bulletY)
-                
     #Movement buttons
     keys = pygame.key.get_pressed()
     if keys[pygame.K_LEFT] or keys[pygame.K_a]:
@@ -106,6 +106,13 @@ while running:
         playerX_change = 0.4
     else:
         playerX_change = 0
+    if keys[pygame.K_F11]:
+        if not is_fullscreen:
+            pygame.display.set_mode((800,600),pygame.FULLSCREEN)
+            is_fullscreen = True
+        else:
+            pygame.display.set_mode((800,600))
+            is_fullscreen = False
         
     #Background color
     screen.fill((150,255,255))
